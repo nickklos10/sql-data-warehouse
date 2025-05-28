@@ -13,13 +13,9 @@ This project demonstrates a modern data warehouse design pattern using a medalli
 
 ### Medallion Architecture Layers
 
-```
-┌─────────────┐    ┌─────────────┐    ┌─────────────┐
-│   Bronze    │    │   Silver    │    │    Gold     │
-│  (Raw Data) │───▶│ (Cleaned)   │───▶│ (Analytics) │
-│             │    │             │    │             │
-└─────────────┘    └─────────────┘    └─────────────┘
-```
+![Data Architecture](data_architecture.png)
+
+The data warehouse follows a medallion architecture pattern with three distinct layers, each serving a specific purpose in the data transformation pipeline:
 
 #### 🥉 Bronze Layer
 - **Purpose**: Raw data ingestion from source systems
